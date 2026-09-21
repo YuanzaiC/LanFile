@@ -13,7 +13,7 @@
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.2-7F52FF?logo=kotlin\&logoColor=white)](#-技术栈)
 [![License](https://img.shields.io/badge/License-未附加许可证-lightgrey)](#-说明)
 
-<img src="shot/Main.png" alt="LanFile" width="320">
+<img src="shot/icon.png" alt="LanFile" width="320">
 
 </div>
 
