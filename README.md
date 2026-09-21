@@ -228,13 +228,18 @@ app/build/outputs/apk/debug/app-debug.apk
 
 本项目为个人项目，目前**未附加开源许可证**。
 
-如果需要转载、修改或二次分发，请先联系作者。
+欢迎转载、修改或二次分发
 
 LanFile 不依赖云端服务，文件与文字主要在你的设备和局域网内流转。
 
 欢迎提交 Issue 反馈问题或交流使用体验。
 
 如果这个项目对你有帮助，欢迎点个 ⭐。
+
+## AI 使用说明
+
+本项目部分代码、功能设计及文档内容由 AI 辅助生成，并经过作者修改、测试和整理。
+
 
 <div align="center">
 <sub>Made with Kotlin & a hand-written HTTP server.</sub>
