@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- 应用主题：Material 3，浅色 / 深色自动切换 -->
+    <style name="Base.Theme.LanFile" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorOnPrimary">@color/brand_on_primary</item>
+        <item name="colorPrimaryContainer">@color/brand_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/brand_on_primary_container</item>
+        <item name="colorSecondary">@color/brand_secondary</item>
+        <item name="colorOnSecondary">@color/brand_on_secondary</item>
+        <item name="android:windowBackground">@drawable/bg_app_gradient</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.LanFile" parent="Base.Theme.LanFile" />
+
+    <!-- 圆形（右下角服务小球） -->
+    <style name="ShapeAppearance.LanFile.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- 页面大标题 -->
+    <style name="TextAppearance.LanFile.PageTitle" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 卡片小标题 -->
+    <style name="TextAppearance.LanFile.SectionTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 说明文字 -->
+    <style name="TextAppearance.LanFile.Caption" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    </style>
+</resources>

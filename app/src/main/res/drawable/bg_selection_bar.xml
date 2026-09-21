@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 多选操作条：圆角、轻微抬起 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/icon_chip_bg" />
+    <corners android:radius="18dp" />
+</shape>

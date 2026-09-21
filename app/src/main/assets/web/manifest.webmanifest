@@ -1,0 +1,9 @@
+{
+  "name": "局域网文件",
+  "short_name": "局域网文件",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#3b6ef6",
+  "icons": []
+}

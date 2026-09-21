@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  FileProvider 可分享的目录范围：
+  应用专属外部目录 + 公共内部存储（局域网文件目录所在的卷）+ 应用内部目录。
+-->
+<paths>
+    <external-path
+        name="shared_external"
+        path="." />
+    <external-files-path
+        name="app_external_files"
+        path="." />
+    <files-path
+        name="app_files"
+        path="." />
+    <cache-path
+        name="app_cache"
+        path="." />
+</paths>

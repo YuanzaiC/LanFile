@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 品牌色 -->
+    <color name="brand_primary">#FF4C6EF5</color>
+    <color name="brand_on_primary">#FFFFFFFF</color>
+    <color name="brand_primary_container">#FFE3E9FF</color>
+    <color name="brand_on_primary_container">#FF10265E</color>
+    <color name="brand_secondary">#FF00A9A5</color>
+    <color name="brand_on_secondary">#FFFFFFFF</color>
+
+    <!-- 状态色 -->
+    <color name="status_running">#FF16A34A</color>
+    <color name="status_stopped">#FF94A3B8</color>
+    <color name="status_error">#FFDC2626</color>
+
+    <!-- 列表选中 / 按压 -->
+    <color name="item_selected">#264C6EF5</color>
+    <color name="item_pressed">#14000000</color>
+
+    <!-- 消息气泡 -->
+    <color name="bubble_in">#FFF1F3F9</color>
+    <color name="bubble_in_stroke">#FFE1E5F0</color>
+    <color name="bubble_out">#FF4C6EF5</color>
+
+    <!-- 图标底板 -->
+    <color name="icon_chip_bg">#FFEDF1FE</color>
+    <color name="icon_chip_tint">#FF3B5BDB</color>
+
+    <!-- 右下角服务小球（两种主题下都用同一套：白图标 + 高饱和底色，暗色也清楚） -->
+    <color name="ball_running_bg">#FF16A34A</color>
+    <color name="ball_idle_bg">#FF64748B</color>
+    <color name="ball_alert_bg">#FFDC2626</color>
+    <color name="ball_icon">#FFFFFFFF</color>
+</resources>

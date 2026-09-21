@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>局域网文件</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="manifest" href="/manifest.webmanifest">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brandText">
+      <h1 id="brandTitle">局域网文件</h1>
+      <p id="deviceInfo" class="meta">正在读取设备信息…</p>
+    </div>
+  </div>
+  <div class="topActions">
+    <button id="btnAuto" class="btn tiny" title="自动刷新列表">自动刷新：开</button>
+    <button id="btnTheme" class="btn tiny" title="切换深浅色">🌓</button>
+    <button id="btnRefresh" class="btn tiny" title="刷新">⟳ 刷新</button>
+  </div>
+</header>
+
+<main>
+  <section class="card">
+    <div class="row pathRow">
+      <button id="btnUp" class="btn tiny">↑ 上一级</button>
+      <nav id="breadcrumb" class="breadcrumb" aria-label="路径"></nav>
+      <span id="listMeta" class="meta"></span>
+    </div>
+
+    <div class="row toolbar">
+      <div class="searchBox">
+        <input id="searchInput" type="search" placeholder="在当前目录递归搜索文件名…" autocomplete="off">
+        <button id="btnSearch" class="btn tiny">搜索</button>
+        <button id="btnSearchClear" class="btn tiny ghost">清除</button>
+      </div>
+      <span class="spacer"></span>
+      <button id="btnMkdir" class="btn tiny">＋ 新建文件夹</button>
+      <button id="btnUpload" class="btn tiny primary">⬆ 上传文件</button>
+      <input id="fileInput" type="file" multiple hidden>
+      <button id="btnSelectAll" class="btn tiny ghost">全选</button>
+    </div>
+
+    <div id="selectionBar" class="selectionBar hidden">
+      <span id="selectionInfo" class="meta">已选择 0 项</span>
+      <button class="btn tiny" data-batch="download">下载</button>
+      <button class="btn tiny" data-batch="copy">复制到…</button>
+      <button class="btn tiny" data-batch="move">移动到…</button>
+      <button class="btn tiny danger" data-batch="delete">删除</button>
+      <button class="btn tiny ghost" data-batch="clear">取消选择</button>
+    </div>
+
+    <div class="tableWrap">
+      <table class="fileTable">
+        <thead>
+          <tr>
+            <th class="cCheck"></th>
+            <th class="cName">名称</th>
+            <th class="cSize">大小</th>
+            <th class="cTime">修改时间</th>
+            <th class="cAct">操作</th>
+          </tr>
+        </thead>
+        <tbody id="fileBody"></tbody>
+      </table>
+      <div id="emptyState" class="empty hidden">此文件夹为空</div>
+      <div id="loading" class="empty">正在加载…</div>
+    </div>
+  </section>
+
+  <section class="card" id="uploadCard">
+    <div class="row">
+      <h2>上传进度</h2>
+      <span id="uploadSummary" class="meta"></span>
+      <span class="spacer"></span>
+      <button id="btnClearUploads" class="btn tiny ghost">清空记录</button>
+    </div>
+    <div id="uploadList" class="uploadList"></div>
+    <p id="uploadHint" class="meta hint">把文件直接拖到网页任意位置即可上传到<b>当前目录</b>；上传的文件会立即出现在手机端。</p>
+  </section>
+
+  <section class="card" id="messageCard">
+    <div class="row">
+      <h2>文字互传</h2>
+      <span id="messageMeta" class="meta"></span>
+      <span class="spacer"></span>
+      <button id="btnMessagesRefresh" class="btn tiny ghost">刷新</button>
+      <button id="btnMessagesClear" class="btn tiny danger ghost">清空全部</button>
+    </div>
+    <div class="row messageCompose">
+      <textarea id="messageInput" rows="3" placeholder="输入要发送到手机的文字，按 Ctrl+Enter 快速发送"></textarea>
+      <button id="btnSend" class="btn primary">发送</button>
+    </div>
+    <div id="messageList" class="messageList"></div>
+  </section>
+</main>
+
+<div id="dropOverlay" class="dropOverlay hidden">
+  <div class="dropBox">
+    <div class="dropIcon">⬆</div>
+    <div>松开即可上传到 <b id="dropPath">/</b></div>
+  </div>
+</div>
+
+<div id="modal" class="modal hidden">
+  <div class="modalBox">
+    <h3 id="modalTitle">提示</h3>
+    <div id="modalBody" class="modalBody"></div>
+    <div class="modalActions">
+      <button id="modalCancel" class="btn ghost">取消</button>
+      <button id="modalOk" class="btn primary">确定</button>
+    </div>
+  </div>
+</div>
+
+<div id="preview" class="modal hidden">
+  <div class="modalBox wide">
+    <h3 id="previewTitle">预览</h3>
+    <div id="previewBody" class="previewBody"></div>
+    <div class="modalActions">
+      <button id="previewClose" class="btn ghost">关闭</button>
+      <a id="previewDownload" class="btn primary" href="#">下载该文件</a>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurface"
+            android:elevation="8dp"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/menu_bottom_nav" />
+    </LinearLayout>
+
+    <!-- 服务小球：点一下开 / 关服务，长按重启服务 -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/service_ball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="96dp"
+        android:contentDescription="点击开启或关闭服务，长按重启服务"
+        android:src="@drawable/ic_power"
+        app:backgroundTint="@color/ball_idle_bg"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="mini"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.LanFile.Circle"
+        app:tint="@color/ball_icon" />
+</FrameLayout>

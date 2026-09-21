@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 品牌色（深色模式：更亮、更柔和） -->
+    <color name="brand_primary">#FF9DB2FF</color>
+    <color name="brand_on_primary">#FF12234F</color>
+    <color name="brand_primary_container">#FF2B3A6B</color>
+    <color name="brand_on_primary_container">#FFDCE3FF</color>
+    <color name="brand_secondary">#FF4FD8D4</color>
+    <color name="brand_on_secondary">#FF00332F</color>
+
+    <color name="status_running">#FF4ADE80</color>
+    <color name="status_stopped">#FF7C8AA0</color>
+    <color name="status_error">#FFF87171</color>
+
+    <color name="item_selected">#339DB2FF</color>
+    <color name="item_pressed">#1FFFFFFF</color>
+
+    <color name="bubble_in">#FF23272F</color>
+    <color name="bubble_in_stroke">#FF31363F</color>
+    <color name="bubble_out">#FF3A56C4</color>
+
+    <color name="icon_chip_bg">#FF2A3140</color>
+    <color name="icon_chip_tint">#FF9DB2FF</color>
+</resources>
